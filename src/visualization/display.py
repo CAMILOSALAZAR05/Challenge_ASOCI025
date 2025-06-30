@@ -1,4 +1,3 @@
-
 def mostrar_resultado(nombre, res):
     print(f"\n Resultado para {nombre} ")
     tot = res["totales"]
