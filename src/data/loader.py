@@ -1,12 +1,10 @@
 import json
-import os
+from pathlib import Path
 
-def cargar_instancia(nombre_archivo):
-    ruta_datos = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data')
-    ruta_completa = os.path.join(ruta_datos, nombre_archivo)
+def cargar_instancia_desde_menu(seleccion, ruta):
+    with open(ruta / f"instance{seleccion}.json", "r", encoding="utf-8") as f:
+        return json.load(f)
 
-    try:
-        with open(ruta_completa, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        raise FileNotFoundError(f"No se encontró el archivo: {ruta_completa}")
+def cargar_instancia_personalizada(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
