@@ -1,15 +1,22 @@
-# Challenge_ASOCI025
+# Challenge_ASOCIO25
 
-Proyecto de optimización para la asignación de escritorios a empleados, resuelto mediante programación lineal con la librería `pulp`.
+Este proyecto resuelve el problema de asignación de escritorios a empleados optimizando los días de reunión por grupo.
 
-Este proyecto permite resolver múltiples instancias del problema de asignación óptima de escritorios, siguiendo una estructura modular y clara.
+## Estructura del proyecto
 
----
+```
+Challenge_ASOCIO25/
+├── data/
+├── src/
+│   ├── optimizer/model/
+│   └── main.py
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
 
-##  Requisitos
+## Cómo ejecutar
 
-- Python 3.8 o superior
-- Librerías:
-  - `pulp` (para programación lineal)
-
----
+```bash
+python src/main.py
+```
